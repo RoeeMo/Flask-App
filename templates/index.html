@@ -40,16 +40,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Product 1</td>
-          <td>$10.00</td>
-          <td><img src="https://via.placeholder.com/150x150" alt="Product 1"></td>
-        </tr>
-        <tr>
-          <td>Product 2</td>
-          <td>$20.00</td>
-          <td><img src="https://via.placeholder.com/150x150" alt="Product 2"></td>
-        </tr>
+        {% for i in range(items['name']|length) %}
+          <tr>
+            <td>{{ items['name'][i] }}</td>
+            <td>{{ items['price'][i] }}</td>
+            <td><img src="{{ items['image_url'][i] }}" alt="{{ items['name'][i] }}" class="rounded-circle" width="50" height="50"></td>
+          </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
