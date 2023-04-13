@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 import os
 # load_dotenv()
 
-db_conn_str = os.environ['DB_CONN_STR']
+db_conn_str = os.environ['db_conn_str']
 engine = create_engine(db_conn_str, connect_args={"ssl": {"ssl_ca": ""}})
 
 
