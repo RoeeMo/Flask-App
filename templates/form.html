@@ -1,0 +1,39 @@
+<div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="add-item-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add-item-modal-label">Add Item</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/add_item" method="post">
+          <div class="mb-3">
+            <input type="text" class="form-control" name="name" placeholder="Item Name" required>
+          </div>
+          <div class="mb-3 row">
+            <div class="col">
+              <input type="number" class="form-control" name="price" placeholder="Price" required>
+            </div>
+            <div class="col">
+              <select name="currency" class="form-control">
+                <option value="$">US Dollar ($)</option>
+                <option value="₪">Israeli Shekel (₪)</option>
+                <option value="€">Euro (€)</option>
+                <option value="£">British Pound (£)</option>
+                <option value="¥">Japanese Yen (¥)</option>
+                <option value="₹">Indian Rupee (₹)</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" name="image_url" placeholder="Image URL" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="description" class="form-control" rows="1" oninput="autoSize(this)" placeholder="Description" required></textarea>
+          </div>
+          <input type="submit" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
