@@ -2,3 +2,7 @@ Flask
 gunicorn
 sqlalchemy
 pymysql
+flask_login
+flask_bcrypt
+flask_wtf
+email_validator
